@@ -1,0 +1,352 @@
+body {
+  user-select: none;
+  --menupanelday: rgb(77, 77, 77);
+  --borders: rgb(143, 143, 143);
+  --statusbar: rgb(88, 88, 88);
+  --sidebar: rgb(107, 107, 110);
+  --buttonhover: rgb(114, 114, 116);
+  --titlehover: rgb(175, 175, 175);
+  --content: rgb(209, 209, 209);
+  --black: black;
+  --white: #fcf9f9;
+  --links: blue;
+}
+
+body.active {
+  --menupanelday: rgb(19, 18, 18);
+  --borders: rgb(63, 62, 62);
+  --statusbar: rgb(34, 34, 34);
+  --sidebar: rgb(20, 20, 20);
+  --buttonhover: rgb(85, 85, 85);
+  --titlehover: rgb(44, 43, 43);
+  --content: rgb(80, 78, 78);
+  --black: rgb(255, 253, 253);
+  --white: #fcf9f9;
+  color: white;
+  --links: rgb(0, 238, 255);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  background-color: var(--content);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+div#menu {
+  height: 30px;
+  flex: none;
+  background-color: var(--menupanelday);
+  display: flex;
+  align-items: center;
+  border-bottom: 5px solid var(--borders);
+}
+
+div#mainArea {
+  flex-grow: 1;
+  display: flex;
+  min-width: 0;
+}
+
+div#sidebar {
+  width: 200px;
+  flex: none;
+  border-right: 5px solid var(--borders);
+  background-color: var(--sidebar);
+}
+
+div#content {
+  background-color: var(--content);
+  flex: 1;
+  overflow-y: auto;
+  height: 90vh;
+  padding-left: 30px;
+}
+
+#content::-webkit-scrollbar {
+  display: none;
+}
+
+div#statusBar {
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--statusbar);
+  border-top: 5px solid var(--borders);
+}
+div#statusBar h4 {
+  user-select: none;
+  cursor: default;
+  padding: 5px 20px 0 0;
+  margin: 0;
+  color: var(--white);
+}
+
+div#statusBar h4 span {
+  cursor: pointer;
+  padding: 5px 0 0 0;
+  margin: 0;
+  color: var(--white);
+}
+
+div#statusBar .lang {
+  padding: 0 0 0 20px;
+}
+
+.iconos {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.iconos img {
+  height: 25px;
+}
+
+.icon-button {
+  margin: 0 0 0 1%;
+  padding-top: 2px;
+}
+
+.icon-button:hover {
+  cursor: pointer;
+}
+
+.nav-button {
+  border-left: 1px solid var(--white);
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: monospace;
+  display: inline;
+  padding-left: 1%;
+  margin-left: 1%;
+}
+
+.nav-button a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  background-color: var(--buttonhover);
+}
+
+.heading {
+  width: 100%;
+  height: fit-content;
+  min-height: 30px;
+  background-color: var(--statusbar);
+  color: var(--white);
+  font-size: 30px;
+  text-indent: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.hide {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  width: 100%;
+  height: fit-content;
+  min-height: 20px;
+  border-bottom: 1px dashed var(--black);
+  color: var(--white);
+  font-size: 15px;
+  text-indent: 20px;
+  padding-top: 5px;
+}
+
+.subtitle {
+  text-indent: 25px;
+  padding-top: 0;
+}
+.subtitle img {
+  margin-right: -7px;
+}
+
+.title:hover {
+  background-color: var(--titlehover);
+  cursor: pointer;
+}
+
+.contentabout {
+  width: 90%;
+  margin: 3% auto;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: justify;
+}
+
+#content ul {
+  padding-top: 0;
+  margin-top: 0;
+  padding-right: 40px;
+  font-size: 20px;
+}
+#content ul p {
+  text-indent: 0;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#content ul li {
+  margin-top: 10px;
+  list-style: url("images/icons/icons8-arrow-20.png");
+}
+
+#content ul li a {
+  color: var(--links);
+}
+
+#content ul li a:visited {
+  color: var(--links);
+}
+
+#content ul p::before {
+  content: url("images/icons/el-black.ico");
+}
+
+/* Toggle night button */
+/* From cssbuttons.io by @Voxybuns */
+/* The switch - the box around the slider */
+
+.toggle {
+  margin: 0;
+  padding-top: 5px;
+}
+.switch {
+  /* Variables */
+  --switch_width: 2em;
+  --switch_height: 1em;
+  --thumb_color: #e8e8e8;
+  --track_color: #e8e8e8;
+  --track_active_color: #888;
+  --outline_color: #000;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: var(--switch_width);
+  height: var(--switch_height);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  box-sizing: border-box;
+  border: 2px solid var(--outline_color);
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--track_color);
+  transition: 0.15s;
+  border-radius: var(--switch_height);
+}
+
+.slider:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  height: var(--switch_height);
+  width: var(--switch_height);
+  border: 2px solid var(--outline_color);
+  border-radius: 100%;
+  left: -2px;
+  bottom: -2px;
+  background-color: var(--thumb_color);
+  transform: translateY(-0.2em);
+  box-shadow: 0 0.2em 0 var(--outline_color);
+  transition: 0.15s;
+}
+
+input:checked + .slider {
+  background-color: var(--track_active_color);
+}
+
+input:focus-visible + .slider {
+  box-shadow: 0 0 0 2px var(--track_active_color);
+}
+
+/* Raise thumb when hovered */
+input:hover + .slider:before {
+  transform: translateY(-0.3em);
+  box-shadow: 0 0.3em 0 var(--outline_color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em);
+}
+
+/* Raise thumb when hovered & checked */
+input:hover:checked + .slider:before {
+  transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
+  box-shadow: 0 0.3em 0 var(--outline_color);
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow: hidden;
+  }
+  .iconos img {
+    height: 20px;
+  }
+  .contentabout {
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  :root {
+    margin: 0;
+    padding: 0;
+  }
+  #sidebar {
+    height: calc(100% - 65px);
+    position: absolute;
+  }
+}
+
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
