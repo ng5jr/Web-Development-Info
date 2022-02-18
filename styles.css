@@ -326,7 +326,7 @@ input:hover:checked + .slider:before {
     padding: 0;
   }
   #sidebar {
-    height: calc(100% - 65px);
+    height: calc(100% - 55px);
     position: absolute;
   }
 }
