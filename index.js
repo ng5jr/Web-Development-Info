@@ -14,10 +14,12 @@ $(document).ready(function () {
   $(".day h4").text(date);
   $("#content div").hide();
   $(".button-show").show();
+  $(".button-hide").hide();
   $("li a").attr("target", "_blank");
   $(".iconnight").hide();
   $(".aboutcontent").show();
   $("#sidebar").hide();
+  screenSize();
 });
 
 $(".about").click(function () {
@@ -54,21 +56,8 @@ $(".daynight").click(function () {
   $(".iconnight").toggle();
 });
 
-// Media for Smaller devices
-function myFunction(x) {
-  if (x.matches) {
-    // If media query matches
-    $("#sidebar").hide();
-    $(".button-hide").hide();
-    $(".button-show").show();
-    document.querySelectorAll(".title").forEach((item) => {
-      item.addEventListener("click", (event) => {
-        $("#sidebar").hide();
-        $(".button-hide").hide();
-        $(".button-show").show();
-      });
-    });
-  } else {
+function screenSize() {
+  if ($(window).width() > 800) {
     document.querySelectorAll(".title").forEach((item) => {
       item.addEventListener("click", (event) => {
         $("#content div").hide();
@@ -79,12 +68,19 @@ function myFunction(x) {
         $("" + itemToToggle + "").toggle();
       });
     });
-    $("#sidebar").show();
-    $(".button-hide").hide();
-    $(".button-show").show();
+  } else if ($(window).width() < 800) {
+    document.querySelectorAll(".title").forEach((item) => {
+      item.addEventListener("click", (event) => {
+        $("#content div").hide();
+        $(".contentabout").hide();
+        $("#sidebar").show();
+        var itemToToggle = "." + item.id + "";
+
+        $("" + itemToToggle + "").toggle();
+        $("#sidebar").hide();
+        $(".button-hide").hide();
+        $(".button-show").show();
+      });
+    });
   }
 }
-
-const x = window.matchMedia("(max-width: 800px)");
-myFunction(x);
-x.addListener(myFunction);
