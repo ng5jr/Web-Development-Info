@@ -1,3 +1,8 @@
+:root {
+  height: 100%;
+  max-height: 100%;
+}
+
 body {
   user-select: none;
   --menupanelday: rgb(77, 77, 77);
@@ -28,7 +33,6 @@ body.active {
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
   font-family: monospace;
