@@ -327,6 +327,11 @@ input:hover:checked + .slider:before {
     height: calc(100% - 65px);
     position: absolute;
   }
+  #statusbar {
+    position: absolute;
+    z-index: 1000;
+    height: 25px;
+  }
 }
 
 #loader {
