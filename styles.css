@@ -329,7 +329,7 @@ input:hover:checked + .slider:before {
     padding: 0;
   }
   #sidebar {
-    /* height: calc(100% - 65px); */
+    height: 99%;
     position: absolute;
   }
   div#mainArea {
@@ -338,10 +338,10 @@ input:hover:checked + .slider:before {
     display: flex;
     min-width: 0;
   }
-  /* div#content {
-    height: calc(100% - 65px);
+  div#content {
+    max-height: 99%;
     overflow-y: auto;
-  } */
+  }
 }
 
 #loader {
