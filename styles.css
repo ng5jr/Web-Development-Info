@@ -362,6 +362,13 @@ input:hover:checked + .slider:before {
   }
   .nav-button {
     font-size: 17px;
+    padding-left: 2%;
+  }
+  .about {
+    margin-left: 2%;
+  }
+  div#menu {
+    height: 40px;
   }
   .contentabout {
     margin: 10px 0 0 0;
@@ -381,21 +388,25 @@ input:hover:checked + .slider:before {
     padding: 0;
   }
   #sidebar {
-    height: calc(100% - 65px);
+    height: calc(100% - 85px);
     position: absolute;
   }
   #sidebar div {
     padding: 5px 0 5px 0;
   }
   div#mainArea {
-    height: calc(100% - 65px);
+    height: calc(100% - 85px);
     flex-grow: 1;
     display: flex;
     min-width: 0;
   }
   div#content {
-    max-height: calc(100vh - 65px);
+    max-height: calc(100vh - 85px);
     overflow-y: auto;
+  }
+  div#statusBar {
+    height: 35px;
+    padding-top: 5px;
   }
 }
 
