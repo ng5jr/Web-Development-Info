@@ -10,7 +10,7 @@ document.onreadystatechange = function () {
 
 $(document).ready(function () {
   const today = new Date();
-  var date = today.getDate() + "/" + today.getMonth() + "/" + today.getFullYear();
+  var date = today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
   $(".day h4").text(date);
   $("#content div").hide();
   $(".button-show").show();
@@ -19,6 +19,7 @@ $(document).ready(function () {
   $(".iconnight").hide();
   $(".aboutcontent").show();
   $("#sidebar").hide();
+  $(".credits").hide();
   screenSize();
 });
 
@@ -28,12 +29,29 @@ $(".about").click(function () {
   $(".button-hide").hide();
   $("#content div").hide();
   $(".contentabout").show();
+  $(".credit-section").hide();
+});
+
+$(".credits-button").click(function () {
+  $("#sidebar").hide();
+  $(".button-show").show();
+  $(".button-hide").hide();
+  $("#content div").hide();
+  $(".contentabout").hide();
+  $(".credits").show();
+  $("#content .credit-section").show();
+  $("#content .creator").show();
+  $("#content .card").show();
+  $("#content .img").show();
+  $("#content .collabs").show();
+  $("#content .collabs-cards").show();
 });
 
 $(".content").click(function () {
   $("#sidebar").show();
   $(".button-show").hide();
   $(".button-hide").show();
+  $(".credit-section").hide();
 });
 
 $(".button-hide").click(function () {
@@ -48,6 +66,7 @@ $(".button-show").click(function () {
   $("#sidebar").show();
   event.preventDefault();
   $(".button-show").hide();
+  $("#content .credit-section").hide();
 });
 
 $(".daynight").click(function () {
