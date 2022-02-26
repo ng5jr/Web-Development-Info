@@ -353,10 +353,9 @@ input:hover:checked + .slider:before {
   body {
     height: 100%;
     max-height: 100%;
+    overflow: hidden;
   }
-  /* body {
-      overflow: hidden;
-    } */
+
   .iconos img {
     height: 20px;
   }
@@ -409,7 +408,7 @@ input:hover:checked + .slider:before {
     padding-top: 5px;
   }
   .credit-section {
-    height: calc(100% - 85px);
+    height: calc(100% - 60px);
     overflow-y: auto;
   }
   div#statusBar {
