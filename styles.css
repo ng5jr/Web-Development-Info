@@ -391,7 +391,7 @@ input:hover:checked + .slider:before {
     min-width: 0;
   }
   div#content {
-    max-height: 99%;
+    max-height: calc(100vh - 65px);
     overflow-y: auto;
   }
 }
