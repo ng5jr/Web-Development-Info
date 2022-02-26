@@ -84,7 +84,6 @@ div#content {
 }
 
 div#statusBar {
-  z-index: 1010;
   height: 25px;
   display: flex;
   justify-content: space-between;
@@ -406,12 +405,8 @@ input:hover:checked + .slider:before {
     overflow-y: auto;
   }
   div#statusBar {
-    z-index: 1010;
     height: 35px;
     padding-top: 5px;
-  }
-  .credit-section {
-    height: calc(100% - 85px);
   }
 }
 
