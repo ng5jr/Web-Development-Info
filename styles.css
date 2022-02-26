@@ -384,6 +384,9 @@ input:hover:checked + .slider:before {
     height: calc(100% - 65px);
     position: absolute;
   }
+  #sidebar div {
+    padding: 5px 0 5px 0;
+  }
   div#mainArea {
     height: calc(100% - 65px);
     flex-grow: 1;
