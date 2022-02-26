@@ -412,7 +412,7 @@ input:hover:checked + .slider:before {
     height: calc(100% - 85px);
     overflow-y: auto;
   }
-  div#statusbar {
+  div#statusBar {
     z-index: 1010;
   }
 }
