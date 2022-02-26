@@ -1,3 +1,4 @@
+/* Define colours as variables */
 body {
   user-select: none;
   --menupanelday: rgb(77, 77, 77);
@@ -26,6 +27,8 @@ body.active {
   --links: rgb(0, 238, 255);
 }
 
+/* html and body parameters */
+
 html,
 body {
   height: 100%;
@@ -41,6 +44,8 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* Website structure */
 
 div#menu {
   height: 30px;
@@ -68,9 +73,11 @@ div#content {
   background-color: var(--content);
   flex: 1;
   overflow-y: auto;
-  height: 90vh;
+  height: calc(100vh - 65px);
   padding-left: 30px;
 }
+
+/*  Hide scrollbar */
 
 #content::-webkit-scrollbar {
   display: none;
@@ -206,7 +213,7 @@ div#statusBar .lang {
 }
 #content ul li {
   margin-top: 10px;
-  list-style: url("images/icons/icons8-arrow-20.png");
+  list-style-type: square;
 }
 
 #content ul li a {
@@ -217,10 +224,45 @@ div#statusBar .lang {
   color: var(--links);
 }
 
-#content ul p::before {
-  content: url("images/icons/el-black.ico");
+/* credit section */
+.credit-section {
+  margin: 0;
+  padding: 0;
 }
 
+.credit-section h1 {
+  text-align: center;
+}
+
+.creator h2 {
+  padding-top: 10px;
+  margin: 0;
+}
+
+.card {
+  padding-top: 20px;
+  margin: 25px auto;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid var(--black);
+  background-color: rgb(196, 195, 195);
+}
+
+.card:hover {
+  background-color: gray;
+}
+
+.card img {
+  border-radius: 100%;
+  width: 100px;
+}
+
+.collabs-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
 /* Toggle night button */
 /* From cssbuttons.io by @Voxybuns */
 /* The switch - the box around the slider */
@@ -318,18 +360,28 @@ input:hover:checked + .slider:before {
   .iconos img {
     height: 20px;
   }
+  .nav-button {
+    font-size: 17px;
+  }
   .contentabout {
     margin: 10px 0 0 0;
     padding: 0;
     font-size: 20px;
     line-height: 30px;
   }
+  #content ul {
+    font-size: 15px;
+  }
+  #content ul li {
+    margin-top: 5px;
+  }
+
   :root {
     margin: 0;
     padding: 0;
   }
   #sidebar {
-    height: 99%;
+    height: calc(100% - 65px);
     position: absolute;
   }
   div#mainArea {
