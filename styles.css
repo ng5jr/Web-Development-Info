@@ -408,6 +408,9 @@ input:hover:checked + .slider:before {
     height: 35px;
     padding-top: 5px;
   }
+  .credit-section {
+    height: calc(100% - 85px);
+  }
 }
 
 #loader {
