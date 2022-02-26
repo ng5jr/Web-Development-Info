@@ -406,6 +406,7 @@ input:hover:checked + .slider:before {
     overflow-y: auto;
   }
   div#statusBar {
+    z-index: 1010;
     height: 35px;
     padding-top: 5px;
   }
