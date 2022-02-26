@@ -84,6 +84,7 @@ div#content {
 }
 
 div#statusBar {
+  z-index: 1010;
   height: 25px;
   display: flex;
   justify-content: space-between;
