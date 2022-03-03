@@ -76,7 +76,7 @@ div#content {
   background-color: var(--content);
   flex: 1;
   overflow-y: auto;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 65px);
   padding-left: 30px;
 }
 
@@ -279,6 +279,10 @@ div#statusBar .lang {
   width: 100px;
 }
 
+.collabs h1 {
+  margin-top: 50px;
+}
+
 .collabs-cards {
   display: flex;
   flex-wrap: wrap;
@@ -408,8 +412,9 @@ input:hover:checked + .slider:before {
   #content ul {
     font-size: 15px;
   }
-  #content ul li {
-    margin-top: 5px;
+
+  #content ul li a {
+    margin-top: 10px;
   }
 
   :root {
