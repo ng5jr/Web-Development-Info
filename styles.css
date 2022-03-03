@@ -11,6 +11,7 @@ body {
   --black: black;
   --white: #fcf9f9;
   --links: blue;
+  --blue: rgb(23, 97, 255);
 }
 
 body.active {
@@ -25,6 +26,7 @@ body.active {
   --white: #fcf9f9;
   color: white;
   --links: rgb(0, 238, 255);
+  --blue: rgb(0, 132, 255);
 }
 
 /* html and body parameters */
@@ -67,13 +69,14 @@ div#sidebar {
   flex: none;
   border-right: 5px solid var(--borders);
   background-color: var(--sidebar);
+  transition: all 0.5s;
 }
 
 div#content {
   background-color: var(--content);
   flex: 1;
   overflow-y: auto;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 70px);
   padding-left: 30px;
 }
 
@@ -96,6 +99,20 @@ div#statusBar h4 {
   padding: 5px 20px 0 0;
   margin: 0;
   color: var(--white);
+  font-size: 15px;
+}
+
+div#statusBar h3 {
+  user-select: none;
+  cursor: default;
+  padding: 4px 0 0 0;
+  margin: 0;
+  color: var(--white);
+}
+
+div#statusBar .toggling {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 div#statusBar h4 span {
@@ -106,6 +123,8 @@ div#statusBar h4 span {
 }
 
 div#statusBar .lang {
+  display: flex;
+  flex-wrap: wrap;
   user-select: none;
   padding: 0 0 0 20px;
 }
@@ -226,8 +245,9 @@ div#statusBar .lang {
 
 /* credit section */
 .credit-section {
-  margin: 0;
+  margin: 0 0 0 -30px;
   padding: 0;
+  overflow: hidden;
 }
 
 .credit-section h1 {
@@ -247,7 +267,7 @@ div#statusBar .lang {
   justify-content: center;
   text-align: center;
   border: 2px solid var(--black);
-  background-color: rgb(196, 195, 195);
+  background-color: rgb(153, 152, 152);
 }
 
 .card:hover {
@@ -262,6 +282,16 @@ div#statusBar .lang {
 .collabs-cards {
   display: flex;
   flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 25px;
+}
+
+path {
+  fill: var(--black);
+}
+
+path:hover {
+  fill: var(--blue);
 }
 /* Toggle night button */
 /* From cssbuttons.io by @Voxybuns */
@@ -408,11 +438,24 @@ input:hover:checked + .slider:before {
     padding-top: 5px;
   }
   .credit-section {
-    height: calc(100% - 60px);
+    height: 99%;
     overflow-y: auto;
+  }
+  .card {
+    width: 170px;
+    margin: 0 auto;
   }
   div#statusBar {
     z-index: 1010;
+  }
+  div#statusBar h3 {
+    font-size: 15px;
+  }
+  .collabs-cards {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 25px;
   }
 }
 
