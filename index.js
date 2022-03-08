@@ -1,12 +1,11 @@
-document.onreadystatechange = function () {
-  if (document.readyState !== "complete") {
-    $("body").hide();
-    $("#loader").show();
-  } else {
-    $("#loader").hide();
-    $("body").show();
-  }
-};
+
+function hideLoader() {
+  $(".loader-wrapper").fadeOut("slow");
+}
+
+$(window).on("load", function () {
+  setTimeout(hideLoader, 3000);
+});
 
 $(document).ready(function () {
   const today = new Date();
@@ -103,4 +102,3 @@ function screenSize() {
     });
   }
 }
-
