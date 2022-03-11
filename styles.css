@@ -293,6 +293,7 @@ div#statusBar .lang {
   flex-wrap: wrap;
   column-gap: 25px;
   row-gap: 25px;
+  padding-bottom: 65px;
 }
 
 path {
@@ -421,7 +422,9 @@ input:hover:checked + .slider:before {
   #content ul li a {
     margin-top: 10px;
   }
-
+  .last-ul {
+    padding-bottom: 65px;
+  }
   :root {
     margin: 0;
     padding: 0;
