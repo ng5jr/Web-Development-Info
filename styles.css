@@ -421,6 +421,7 @@ input:hover:checked + .slider:before {
     padding: 0;
     font-size: 20px;
     line-height: 30px;
+    text-align: left;
   }
   #content ul {
     font-size: 15px;
