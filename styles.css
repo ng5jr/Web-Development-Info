@@ -129,6 +129,8 @@ div#statusBar .lang {
   padding: 0 0 0 20px;
 }
 
+/* Nav Bar */
+
 .iconos {
   width: 80%;
   display: flex;
@@ -185,6 +187,8 @@ div#statusBar .lang {
   justify-content: center;
 }
 
+/* Side bar */
+
 .title {
   width: 100%;
   height: fit-content;
@@ -208,6 +212,8 @@ div#statusBar .lang {
   background-color: var(--titlehover);
   cursor: pointer;
 }
+
+/* Content  */
 
 .contentabout {
   width: 90%;
@@ -285,7 +291,6 @@ div#statusBar .lang {
 
 .collabs h1 {
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .collabs-cards {
@@ -387,6 +392,8 @@ input:hover:checked + .slider:before {
   transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
   box-shadow: 0 0.3em 0 var(--outline_color);
 }
+
+/* Media Query */
 
 @media (max-width: 800px) {
   html,
