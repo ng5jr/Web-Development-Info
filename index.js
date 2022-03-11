@@ -1,10 +1,9 @@
-
 function hideLoader() {
   $(".loader-wrapper").fadeOut("slow");
 }
 
 $(window).on("load", function () {
-  setTimeout(hideLoader, 3000);
+  setTimeout(hideLoader, 1000);
 });
 
 $(document).ready(function () {
